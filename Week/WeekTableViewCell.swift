@@ -23,11 +23,11 @@ class WeekTableViewCell: UITableViewCell {
         weekMovieTitleLabel.text = "영화: \(model.movieNm)"
         weekAudienceLabel.text =  "관객수: \(model.audiAcc)명"
         weekOpeningDateLabel.text = "개봉일: \(model.openDt)"
-        weekNewrankingLabel.text = "신규 판별 - \(model.rankOldAndNew)"
+        weekNewrankingLabel.text = "\(model.rankOldAndNew)"
         weekComparedToYesterdayLabel.text = "순위변동 : \(model.rankInten)"
         
         if model.rankInten == "0" {
-            weekComparedToYesterdayLabel.text = "변동없음"
+            weekComparedToYesterdayLabel.text = "-"
             weekCountLabel.text = " "
         } else if model.rankInten >= "0" {
             weekCountLabel.text = "▲"

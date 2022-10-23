@@ -19,13 +19,13 @@ class MovieListTableViewCell: UITableViewCell {
     
     func setModel(model: MovieInfost) {
         rankingLabel.text = model.rank
-        movieTitleLabel.text = "영화: \(model.movieNm)"
+        movieTitleLabel.text = "제목: \(model.movieNm)"
         audienceLabel.text = "관객수: \(model.audiAcc)명"
         openingDateLabel.text = "개봉일: \(model.openDt)"
-        newRankingLabel.text = "신규 판별 \(model.rankOldAndNew)"
+        newRankingLabel.text = "\(model.rankOldAndNew)"
 //        comparedToYesterdayLabel.text = "순위변동: \(model.rankInten)"
         if model.rankInten == "0" {
-            comparedToYesterdayLabel.text = "변동없음"
+            comparedToYesterdayLabel.text = "-"
             countLabel.text = " "
         } else if model.rankInten >= "0" {
             countLabel.text = "▲"
