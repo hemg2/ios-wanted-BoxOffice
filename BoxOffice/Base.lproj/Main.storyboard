@@ -156,7 +156,7 @@
         <scene sceneID="woM-B0-H1q">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="kpM-Wo-x7E" customClass="SecondViewController" customModule="BoxOffice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="Sp4-6R-Q5x">
+                    <view key="view" contentMode="scaleToFill" id="Sp4-6R-Q5x">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -360,50 +360,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wj-VG-yRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2729.2307692307691" y="-2.1327014218009479"/>
-        </scene>
-        <!--Image View Controller-->
-        <scene sceneID="fJO-SK-zCu">
-            <objects>
-                <viewController storyboardIdentifier="imageViewController" id="re8-Sc-aTm" customClass="imageViewController" customModule="BoxOffice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vQf-xX-Fnu">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Wt-Gx-mhk">
-                                <rect key="frame" x="70" y="147" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="PbG-tz-hMt"/>
-                                    <constraint firstAttribute="width" constant="250" id="hoU-2O-EDY"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ3-g6-udh">
-                                <rect key="frame" x="150" y="497" width="90" height="193"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="사진첩"/>
-                                <connections>
-                                    <action selector="test:" destination="re8-Sc-aTm" eventType="touchUpInside" id="k9P-G6-WV4"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="qr1-1e-AwT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="9Wt-Gx-mhk" firstAttribute="leading" secondItem="qr1-1e-AwT" secondAttribute="leading" constant="70" id="BkJ-tm-9oa"/>
-                            <constraint firstItem="qr1-1e-AwT" firstAttribute="trailing" secondItem="9Wt-Gx-mhk" secondAttribute="trailing" constant="70" id="K8h-Ys-g1p"/>
-                            <constraint firstItem="qr1-1e-AwT" firstAttribute="bottom" secondItem="qJ3-g6-udh" secondAttribute="bottom" constant="120" id="Rae-KO-xCs"/>
-                            <constraint firstItem="qr1-1e-AwT" firstAttribute="trailing" secondItem="qJ3-g6-udh" secondAttribute="trailing" constant="150" id="j8M-EJ-y6r"/>
-                            <constraint firstItem="qJ3-g6-udh" firstAttribute="leading" secondItem="qr1-1e-AwT" secondAttribute="leading" constant="150" id="naW-fl-dmc"/>
-                            <constraint firstItem="qJ3-g6-udh" firstAttribute="top" secondItem="9Wt-Gx-mhk" secondAttribute="bottom" constant="100" id="oEw-VE-qb0"/>
-                            <constraint firstItem="9Wt-Gx-mhk" firstAttribute="top" secondItem="qr1-1e-AwT" secondAttribute="top" constant="100" id="pwn-Wp-Jq5"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="testiamge" destination="9Wt-Gx-mhk" id="1Td-s1-FlO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FUT-22-SPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4514" y="-1"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="FEz-QS-mAa">
@@ -745,7 +701,7 @@
         <scene sceneID="dl2-OS-IVp">
             <objects>
                 <viewController storyboardIdentifier="WeekSecondViewController" id="VuU-hV-lPx" customClass="WeekSecondViewController" customModule="BoxOffice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="AAK-cN-hsl">
+                    <view key="view" contentMode="scaleToFill" id="AAK-cN-hsl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
