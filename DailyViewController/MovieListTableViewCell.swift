@@ -22,8 +22,11 @@ class MovieListTableViewCell: UITableViewCell {
         movieTitleLabel.text = "제목: \(model.movieNm)"
         audienceLabel.text = "관객수: \(model.audiAcc)명"
         openingDateLabel.text = "개봉일: \(model.openDt)"
-        newRankingLabel.text = "\(model.rankOldAndNew)"
-//        comparedToYesterdayLabel.text = "순위변동: \(model.rankInten)"
+        if model.rankOldAndNew == "OLD" {
+            newRankingLabel.text = " "
+        } else {
+            newRankingLabel.text = "NEW"
+        }
         if model.rankInten == "0" {
             comparedToYesterdayLabel.text = "-"
             countLabel.text = " "

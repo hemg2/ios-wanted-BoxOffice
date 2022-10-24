@@ -27,6 +27,7 @@ class WeekApi {
             guard let resultData = data else { return }
             let decoder = JSONDecoder()
             let decodedData = try! decoder.decode(Week.self, from: resultData)
+         
             DispatchQueue.main.async {
                 completion(decodedData)
             }

@@ -23,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alex-litvin-MAYsdoYpGuk-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="MSm-ox-HiI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jeremy-yap-J39X2xX_8CQ-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="MSm-ox-HiI">
                                 <rect key="frame" x="70" y="147" width="250" height="247"/>
                             </imageView>
                         </subviews>
@@ -45,7 +45,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="alex-litvin-MAYsdoYpGuk-unsplash" width="2736" height="1824"/>
+        <image name="jeremy-yap-J39X2xX_8CQ-unsplash" width="5184" height="3456"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

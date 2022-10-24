@@ -26,7 +26,7 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
         for index in 1...5 {
             if let starImage = view.viewWithTag(index) as? UIImageView {
                 if Float(index) <= floatValue {
-                    starImage.image = UIImage(named: "star_full")
+                    starImage.image = UIImage(named: "star_full1")
                 }
                 else if (Float(index) - floatValue) <= 0.5 {
                     starImage.image = UIImage(named: "star_half")

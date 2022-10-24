@@ -24,8 +24,7 @@ class WeekTableViewCell: UITableViewCell {
         weekAudienceLabel.text =  "관객수: \(model.audiAcc)명"
         weekOpeningDateLabel.text = "개봉일: \(model.openDt)"
         weekNewrankingLabel.text = "\(model.rankOldAndNew)"
-        weekComparedToYesterdayLabel.text = "순위변동 : \(model.rankInten)"
-        
+      
         if model.rankInten == "0" {
             weekComparedToYesterdayLabel.text = "-"
             weekCountLabel.text = " "

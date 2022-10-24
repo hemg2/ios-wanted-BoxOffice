@@ -38,7 +38,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var yearOfManufactureLabel: UILabel!
     @IBOutlet weak var comparedToYesterdayLabel: UILabel!
     @IBOutlet weak var newRankingLabel: UILabel!
-
+    @IBOutlet weak var updownLabel: UILabel!
     @IBOutlet weak var reView: Review!
     private var secondViewModel: SecondViewModel?
     
@@ -76,8 +76,37 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         yearOfReleaseLabel.text = "개봉연도: \(secondViewModel.yearOfRelease)"
         yearOfManufactureLabel.text = "제작연도: \(secondViewModel.yearOfManufacture)년"
         comparedToYesterdayLabel.text = "순위변동: \(secondViewModel.comparedToYesterday)"
-        newRankingLabel.text = "신규 진입- \(secondViewModel.newRankingLabel)"
+        if secondViewModel.comparedToYesterday == "0" {
+            comparedToYesterdayLabel.text = "-"
+            updownLabel.text = " "
+        } else if secondViewModel.comparedToYesterday >= "0" {
+            updownLabel.text = "▲"
+            updownLabel.textColor = .red
+            comparedToYesterdayLabel.text = secondViewModel.comparedToYesterday
+        } else {
+            updownLabel.text = "▼"
+            updownLabel.textColor = .blue
+            comparedToYesterdayLabel.text = secondViewModel.comparedToYesterday
+        }
+        newRankingLabel.text = "\(secondViewModel.newRankingLabel)"
         audienceLabel.text = "관객수: \(secondViewModel.audiAcc)명"
     }
     
 }
+//if model.rankOldAndNew == "OLD" {
+//    newRankingLabel.text = " "
+//} else {
+//    newRankingLabel.text = "NEW"
+//}
+//if model.rankInten == "0" {
+//    comparedToYesterdayLabel.text = "-"
+//    countLabel.text = " "
+//} else if model.rankInten >= "0" {
+//    countLabel.text = "▲"
+//    countLabel.textColor = .red
+//    comparedToYesterdayLabel.text = model.rankInten
+//} else {
+//    countLabel.text = "▼"
+//    countLabel.textColor = .blue
+//    comparedToYesterdayLabel.text = model.rankInten
+//}

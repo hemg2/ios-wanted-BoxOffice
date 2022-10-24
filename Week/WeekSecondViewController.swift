@@ -39,7 +39,7 @@ class WeekSecondViewController: UIViewController {
     @IBOutlet weak var weekYearOfManufactureLabel: UILabel!
     @IBOutlet weak var weekComparedToYesterdayLabel: UILabel!
     @IBOutlet weak var weekNewRankingLabel: UILabel!   
-
+    @IBOutlet weak var updownLabel: UILabel!
     private var weekViewModel: WeekViewModel?
     
     override func viewDidLoad() {
@@ -67,7 +67,19 @@ class WeekSecondViewController: UIViewController {
         weekYearOfReleaseLabel.text = "개봉연도: \(weekViewModel.yearOfRelease)"
         weekYearOfManufactureLabel.text = "제작연도: \(weekViewModel.yearOfManufacture)년"
         weekComparedToYesterdayLabel.text = "순위변동: \(weekViewModel.comparedToYesterday)"
-        weekNewRankingLabel.text = "신규 진입- \(weekViewModel.newRankingLabel)"
+        if weekViewModel.comparedToYesterday == "0" {
+            weekComparedToYesterdayLabel.text = "-"
+            updownLabel.text = " "
+        } else if weekViewModel.comparedToYesterday >= "0" {
+            updownLabel.text = "▲"
+            updownLabel.textColor = .red
+            weekComparedToYesterdayLabel.text = weekViewModel.comparedToYesterday
+        } else {
+            updownLabel.text = "▼"
+            updownLabel.textColor = .blue
+            weekComparedToYesterdayLabel.text = weekViewModel.comparedToYesterday
+        }
+        weekNewRankingLabel.text = "\(weekViewModel.newRankingLabel)"
         weekAudienceLabel.text = "관객수: \(weekViewModel.audiAcc)명"
 
     }
