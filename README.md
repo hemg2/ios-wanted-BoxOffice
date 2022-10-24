@@ -4,19 +4,21 @@
 
 
 
-일별,주간 영화 리스트
-
-
-![Simulator Screen Shot - iPhone 14 - 2022-10-22 at 16 30 48](https://user-images.githubusercontent.com/101572902/197326698-eb6855f3-9932-4e05-90dc-6533459ed4df.png)
-
-
+일별,주간 영화 리스트|| 
 상세 영화 리스트
-![Simulator Screen Shot - iPhone 14 - 2022-10-22 at 16 30 52](https://user-images.githubusercontent.com/101572902/197326864-bccc4383-749b-4b2b-b2c1-0effcf42be8d.png)
+<p> 
+<img width="250" height="350" src="https://user-images.githubusercontent.com/101572902/197494357-51e72515-22f4-49ac-b14d-cf6b89a60374.png">
+<img width= "250" height="350" src="https://user-images.githubusercontent.com/101572902/197494521-75736bbd-9bde-40f9-a928-2fabbfd0b4ac.png">
+
+
+
+<p>
+<img width= "450" height="550" src="https://user-images.githubusercontent.com/101572902/197495099-16a16b1b-dc17-4bf7-9527-57298e0ebb22.mp4">
 
 
 
 
-https://user-images.githubusercontent.com/101572902/197326874-4065aab7-1071-4cc6-bbe6-e7013fa5cf24.mp4
+
 
 
 
