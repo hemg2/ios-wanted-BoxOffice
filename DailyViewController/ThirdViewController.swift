@@ -8,22 +8,22 @@
 import UIKit
 //import MobileCoreServices
 
-enum VideoHelper {
-    static func startMediaBrowser(
-        delegate: UIViewController & UINavigationControllerDelegate & UIImagePickerControllerDelegate,
-        sourceType: UIImagePickerController.SourceType
-    ) {
-        guard UIImagePickerController.isSourceTypeAvailable(sourceType)
-        else { return }
-
-        let mediaUI = UIImagePickerController()
-        mediaUI.sourceType = sourceType
-//        mediaUI.mediaTypes = [kUTTypeMovie as String]  사진x동영상만가능
-        mediaUI.allowsEditing = true
-        mediaUI.delegate = delegate
-        delegate.present(mediaUI, animated: true, completion: nil)
-    }
-}
+//enum VideoHelper {
+//    static func startMediaBrowser(
+//        delegate: UIViewController & UINavigationControllerDelegate & UIImagePickerControllerDelegate,
+//        sourceType: UIImagePickerController.SourceType
+//    ) {
+//        guard UIImagePickerController.isSourceTypeAvailable(sourceType)
+//        else { return }
+//
+//        let mediaUI = UIImagePickerController()
+//        mediaUI.sourceType = sourceType
+////        mediaUI.mediaTypes = [kUTTypeMovie as String]  사진x동영상만가능
+//        mediaUI.allowsEditing = true
+//        mediaUI.delegate = delegate
+//        delegate.present(mediaUI, animated: true, completion: nil)
+//    }
+//}
 
 class ThirdViewController: UIViewController, UITextFieldDelegate {
     
@@ -61,7 +61,7 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    
     lazy var imagePicker: UIImagePickerController = {
         let picker: UIImagePickerController = UIImagePickerController()
         picker.sourceType = .photoLibrary
@@ -91,16 +91,16 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
         self.present(camera, animated: true)
     }
     @objc private func keepPhoto() {
-        let alert = UIAlertController(title: "무엇을?", message: "무엇을?", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "선택해주세요", message: "사진", preferredStyle: .actionSheet)
         let library = UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary() }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         alert.addAction(library)
         alert.addAction(cancel)
         present(alert, animated: true)
-        VideoHelper.startMediaBrowser(delegate: self, sourceType: .savedPhotosAlbum)
+        //        VideoHelper.startMediaBrowser(delegate: self, sourceType: .savedPhotosAlbum)
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItems = [rightNavButton, firstNavButton]
@@ -150,9 +150,6 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
-
-
-
 extension ThirdViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let url = info[.mediaURL] as? URL, UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(url.path) {
